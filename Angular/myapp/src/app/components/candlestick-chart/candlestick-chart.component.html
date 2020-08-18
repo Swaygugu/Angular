@@ -1,0 +1,18 @@
+<div>
+    Open: 
+    <input type = "number" [(ngModel)] = "candle.open" />
+    {{ candle.open}}
+</div>
+<div>
+    Close: {{ candle.close}}
+</div>
+<div [ngClass]="classForCandle()">
+    Color: {{ candle.color}}
+</div>
+
+<button class= "btn" [ngClass]="{
+    'btn-success': candle.color == 'green',
+    'btn-danger': candle.color == 'red'
+}
+">
+Click Me </button>

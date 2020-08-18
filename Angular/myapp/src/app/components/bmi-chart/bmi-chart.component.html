@@ -1,0 +1,23 @@
+<div>
+    <input type="range" min="40" max="200" step="1" [(ngModel)]="person.weight" />
+    {{person.weight | number :'1.2-2'}}
+
+    <input type="range" min="40" max="200" step="1" [(ngModel)]="person.heightCm" />
+    {{person.heightCm | number :'1.2-2'}}
+    <br>
+
+
+
+    {{ person.BMI | number:'1.2-2'}}
+    {{ person.BmiCategory}}
+    <h2>
+        <fa-icon [icon] = "faBolt" ></fa-icon>
+    </h2>
+
+    <div *ngFor = "let p of people">
+        <fa-icon [icon]="faCoffee" class = "text-danger"></fa-icon>
+        {{ p.heightCm }} = {{ p.BMI}}
+    </div>
+
+
+</div>
